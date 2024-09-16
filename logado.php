@@ -1,4 +1,12 @@
+<?php
+session_start();
 
+if(!isset($_SESSION["loggedinC"]) || $_SESSION["loggedinC"] !== true || !isset($_SESSION["loggedinT"]) || $_SESSION["loggedinT"] !== true){
+    header("location: index.php");
+    exit;
+}
+
+?>
 
 <!DOCTYPE html>
 <html lang="pt_BR">
