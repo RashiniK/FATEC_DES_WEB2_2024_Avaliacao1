@@ -6,9 +6,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if($_POST['username'] == 'coordenacao' and $_POST['password'] == 'coordenacao'){
         $_SESSION['loggedinC'] = TRUE;
        
-         header("location: welcome.php");
+         header("location: logado.php");
     } else {
         $_SESSION['loggedinC'] = FALSE;
+    }
+
+    if($_POST['username'] == 'tecnicos' and $_POST['password'] == 'tecnicos'){
+        $_SESSION['loggedinT'] = TRUE;
+       
+         header("location: logado.php");
+    } else {
+        $_SESSION['loggedinT'] = FALSE;
     }
 }
 ?>
