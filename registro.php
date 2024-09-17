@@ -66,8 +66,8 @@ if(!isset($_SESSION["loggedinC"]) || $_SESSION["loggedinC"] !== true ){
 </head>
 <body>
     <div class="wrapper">
-        <h2>Acessar</h2>
-        <p>Favor inserir login e senha.</p>
+        <h2>Registro</h2>
+        <p>Favor as informações necessarias.</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <label>Laboratório</label>
             <select class="form-control form-control-lg" name="lab">

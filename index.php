@@ -18,7 +18,7 @@
                 <a href ="login.php" ><button type="button" class="btn btn-primary btn-lg btn-block" >Login</button></a>
             </div>    
             <div class="form-group">
-                <a href ="vizualizartds.php" ><button type="button" class="btn btn-primary btn-lg btn-block" >Visualizar todas solicitações</button></a>
+                <a href ="visualizartds.php" ><button type="button" class="btn btn-primary btn-lg btn-block" >Visualizar todas solicitações</button></a>
             </div>
     </div>    
 </body>

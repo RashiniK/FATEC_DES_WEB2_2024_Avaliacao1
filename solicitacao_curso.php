@@ -25,13 +25,13 @@ if($_SESSION["loggedinC"] == true ){
     <div class="wrapper">
         <h2>Acessar</h2>
             <div class="form-group">
-                <a href ="registro.php" ><button type="button" class="btn btn-primary btn-lg btn-block" >Registrar Solicitações</button></a>
+                <a href ="visualizarge.php" ><button type="button" class="btn btn-primary btn-lg btn-block" >Visualizar Solicitações GE</button></a>
             </div>    
             <div class="form-group">
-                <a href ="visualizartds.php" ><button type="button" class="btn btn-primary btn-lg btn-block" >Visualizar Solicitações por Curso</button></a>
+                <a href ="visualizardsm.php" ><button type="button" class="btn btn-primary btn-lg btn-block" >Visualizar Solicitações DSM</button></a>
             </div>
             <div class="form-group">
-                <a href ="logout.php" ><button type="button" class="btn btn-primary btn-lg btn-block" >Sair da Conta</button></a>
+                <a href ="logado.php" ><button type="button" class="btn btn-primary btn-lg btn-block" >voltar</button></a>
             </div>
     </div>    
 </body>
