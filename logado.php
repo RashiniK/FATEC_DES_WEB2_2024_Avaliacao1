@@ -28,7 +28,7 @@ if($_SESSION["loggedinC"] == true ){
                 <a href ="registro.php" ><button type="button" class="btn btn-primary btn-lg btn-block" >Registrar Solicitações</button></a>
             </div>    
             <div class="form-group">
-                <a href ="visualizartds.php" ><button type="button" class="btn btn-primary btn-lg btn-block" >Visualizar Solicitações por Curso</button></a>
+                <a href ="solicitacao_curso.php" ><button type="button" class="btn btn-primary btn-lg btn-block" >Visualizar Solicitações por Curso</button></a>
             </div>
             <div class="form-group">
                 <a href ="logout.php" ><button type="button" class="btn btn-primary btn-lg btn-block" >Sair da Conta</button></a>
