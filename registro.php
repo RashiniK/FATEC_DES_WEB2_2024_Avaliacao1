@@ -2,7 +2,7 @@
 session_start();
 
 if(!isset($_SESSION["loggedinC"]) || $_SESSION["loggedinC"] !== true ){
-    header("location: index.php");
+    header("location: logado.php");
     exit;
 }
 
@@ -25,11 +25,13 @@ if(!isset($_SESSION["loggedinC"]) || $_SESSION["loggedinC"] !== true ){
         <p>Favor inserir login e senha.</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <select class="form-control form-control-lg">
-                <option>Large select</option>
+                <label>Laboratório</label>
+                <option>Laboratório 1</option>
+                <option>Laboratório 2</option>
+                <option>Laboratório 3</option>
             </select>
-            <select class="form-control">
-                <option>Default select</option>
-            </select>
+            <input type="date">
+                
             <select class="form-control form-control-sm">
                 <option>Small select</option>
             </select>

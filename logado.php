@@ -1,11 +1,13 @@
 <?php
 session_start();
 
-if(!isset($_SESSION["loggedinC"]) || $_SESSION["loggedinC"] !== true || !isset($_SESSION["loggedinT"]) || $_SESSION["loggedinT"] !== true){
+if($_SESSION["loggedinC"] == true ){
+    
+    
+}else if(!isset($_SESSION["loggedinT"]) || $_SESSION["loggedinT"] !== true ){
     header("location: index.php");
-    exit;
+    
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +25,7 @@ if(!isset($_SESSION["loggedinC"]) || $_SESSION["loggedinC"] !== true || !isset($
     <div class="wrapper">
         <h2>Acessar</h2>
             <div class="form-group">
-                <a href ="login.php" ><button type="button" class="btn btn-primary btn-lg btn-block" >Registrar Solicitações</button></a>
+                <a href ="registro.php" ><button type="button" class="btn btn-primary btn-lg btn-block" >Registrar Solicitações</button></a>
             </div>    
             <div class="form-group">
                 <a href ="vizualizartds.php" ><button type="button" class="btn btn-primary btn-lg btn-block" >Visualizar Solicitações por Curso</button></a>
