@@ -1,13 +1,5 @@
 <?php
-session_start();
 
-if($_SESSION["loggedinC"] == true ){
-    
-    
-}else if(!isset($_SESSION["loggedinT"]) || $_SESSION["loggedinT"] !== true ){
-    header("location: index.php");
-    
-}
 
 $filename = "ge.txt";
 $filename = "dsm.txt";

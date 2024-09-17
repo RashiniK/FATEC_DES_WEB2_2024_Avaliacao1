@@ -91,5 +91,8 @@ if(!isset($_SESSION["loggedinC"]) || $_SESSION["loggedinC"] !== true ){
             </div>
         </form>
     </div>    
+    <div>
+        <a href ="logado.php" ><button type="button" class="btn btn-primary btn-lg btn-block" >Voltar</button></a>
+    </div>
 </body>
 </html>
