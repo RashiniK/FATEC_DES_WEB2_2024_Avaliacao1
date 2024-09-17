@@ -6,6 +6,51 @@ if(!isset($_SESSION["loggedinC"]) || $_SESSION["loggedinC"] !== true ){
     exit;
 }
 
+    $filenamedsm = "dsm.txt";
+    $filenamege = "ge.txt";
+
+ 
+
+    if($_SERVER["REQUEST_METHOD"] == "POST"){
+        
+            $_SESSION['lab'] = $_POST['lab'];
+            $_SESSION['data'] = $_POST['data'];
+            $_SESSION['solicitacao'] = $_POST['solicitacao'];
+            $_SESSION['curso'] = $_POST['curso'];
+
+
+        if($_SESSION['curso']== "DSM"){
+
+        
+            if(!file_exists("dsm.txt")){
+                $handle = fopen("dsm.txt", "w");
+            } else {
+                $handle = fopen("dsm.txt", "a");
+            }
+        
+
+            fwrite($handle, $_SESSION['lab']."|".$_SESSION['data']."|".$_SESSION['solicitacao'].PHP_EOL);
+
+            fflush($handle);
+            fclose($handle);
+        } else if($_SESSION['curso']=="GE"){
+            
+            if(!file_exists("GE.txt")){
+                $handle = fopen("GE.txt", "w");
+            } else {
+                $handle = fopen("GE.txt", "a");
+            }
+        
+            fwrite($handle, $_SESSION['lab']."|".$_SESSION['data']."|".$_SESSION['solicitacao'].PHP_EOL);
+
+            fflush($handle);
+            fclose($handle);
+        }
+    
+    
+    }
+
+
 ?>
 
 <!DOCTYPE html>
@@ -24,16 +69,22 @@ if(!isset($_SESSION["loggedinC"]) || $_SESSION["loggedinC"] !== true ){
         <h2>Acessar</h2>
         <p>Favor inserir login e senha.</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-            <select class="form-control form-control-lg">
-                <label>Laboratório</label>
-                <option>Laboratório 1</option>
-                <option>Laboratório 2</option>
-                <option>Laboratório 3</option>
+            <label>Laboratório</label>
+            <select class="form-control form-control-lg" name="lab">
+                <option name="lab1">Laboratório 1</option>
+                <option name="lab2">Laboratório 2</option>
+                <option name="lab3">Laboratório 3</option>
             </select>
-            <input type="date">
-                
-            <select class="form-control form-control-sm">
-                <option>Small select</option>
+            <label>Prazo limite</label></br>
+            <input type="date" name="data" value ="dd/mm/aa" style="margin-bottom:5px;"> </br>
+
+            <label>Solicitação</label></br>
+            <input type="text" name="solicitacao" style="margin-bottom:5px;"></br>
+            
+            <label >Curso Atendido</label>
+            <select name="curso" class="form-control form-control-sm">
+                <option name="dsm">DSM</option>
+                <option name="ge">GE</option>
             </select>
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Acessar">
